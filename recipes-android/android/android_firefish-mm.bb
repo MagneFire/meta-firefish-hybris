@@ -9,7 +9,7 @@ PV = "marshmallow"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 INHIBIT_PACKAGE_STRIP = "1"
-COMPATIBLE_MACHINE = "swift"
+COMPATIBLE_MACHINE = "firefish"
 INSANE_SKIP_${PN} = "already-stripped"
 S = "${WORKDIR}"
 B = "${S}"

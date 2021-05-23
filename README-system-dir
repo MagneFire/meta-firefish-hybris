@@ -41,9 +41,9 @@ download and then build them (this may take a while):
 
   curl https://storage.googleapis.com/git-repo-downloads/repo > repo
   chmod a+x repo
-  mkdir -p android-swift/
-  cd android-swift
-  # For now the repo manifest is pretty much swift-specific, maybe we should 
+  mkdir -p android-firefish/
+  cd android-firefish
+  # For now the repo manifest is pretty much firefish-specific, maybe we should 
   # split/merge branches later?
   ../repo init -u https://github.com/AsteroidOS/android_manifest \
 		-b marshmallow-dr1.5-release -g all,-notdefault,-darwin,-mips --depth=1
@@ -76,7 +76,7 @@ libhybris. There is a script in the libhybris distribution that can pull
 the header files from the downloaded android distribution (above).
 
   git clone https://github.com/libhybris/libhybris
-  ./libhybris/utils/extract_headers.sh android-swift include 6 0 1
+  ./libhybris/utils/extract_headers.sh android-firefish include 6 0 1
 
 With the system and include directories, you can create the system-dir tarball:
 

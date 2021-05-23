@@ -6,9 +6,9 @@ SUMMARY = "Android kernel for the Asus Zenwatch 3"
 HOMEPAGE = "https://android.googlesource.com/"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
-COMPATIBLE_MACHINE = "swift"
+COMPATIBLE_MACHINE = "firefish"
 
-SRC_URI = "git://android.googlesource.com/kernel/msm;branch=android-msm-swift-3.18-marshmallow-mr1-wear-release;protocol=https \
+SRC_URI = "git://android.googlesource.com/kernel/msm;branch=android-msm-firefish-3.18-marshmallow-mr1-wear-release;protocol=https \
     file://defconfig \
     file://img_info \
     file://0001-scripts-dtc-Remove-redundant-YYLOC-global-declaratio.patch \

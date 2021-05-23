@@ -1,1 +1,1 @@
-RDEPENDS_${PN}_append_swift = " qt5-qpa-hwcomposer-plugin "
+RDEPENDS_${PN}_append_firefish = " qt5-qpa-hwcomposer-plugin "

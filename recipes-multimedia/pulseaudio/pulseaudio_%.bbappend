@@ -1,1 +1,1 @@
-RDEPENDS_pulseaudio-server_append_swift = " pulseaudio-modules-droid "
+RDEPENDS_pulseaudio-server_append_firefish = " pulseaudio-modules-droid "
