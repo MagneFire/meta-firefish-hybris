@@ -15,7 +15,7 @@ SRC_URI = "git://android.googlesource.com/kernel/msm;branch=android-msm-firefish
     file://0002-ARM-fix-put_user-for-gcc-8.patch"
 SRCREV = "98f3799a0627218e5fe51bf5b0f6f407dcd09d12"
 LINUX_VERSION ?= "3.18"
-PV = "${LINUX_VERSION}+marshmallow"
+PV = "${LINUX_VERSION}+pie"
 S = "${WORKDIR}/git"
 B = "${S}"
 
