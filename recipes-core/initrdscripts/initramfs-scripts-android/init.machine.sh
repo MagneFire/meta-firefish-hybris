@@ -24,11 +24,11 @@ mount --bind $BOOT_DIR/vendor/firmware          /vendor/firmware
 #mount --bind $BOOT_DIR/firmware                 /firmware
 mount --bind $BOOT_DIR/vendor                   /vendor
 
-dd if=/nvdata/MACWLAN of=/proc/wifi/mac
+#dd if=/nvdata/MACWLAN of=/proc/wifi/mac
 
-ip link set up dev wlan0
+#ip link set up dev wlan0
 sleep 1
-ip link set down dev wlan0
+#ip link set down dev wlan0
 
 /system/bin/surfaceflinger &
 killall psplash
