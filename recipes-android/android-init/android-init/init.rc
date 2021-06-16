@@ -16,8 +16,8 @@ service logd /usr/libexec/droid-hybris/system/bin/logd
     socket logdw dgram 0222 logd logd
     file /proc/kmsg r
     file /dev/kmsg w
-    user logd
-    group logd system readproc
+    user root
+    group logd system package_info readproc
 
 service logcat /system/bin/logcat -f /dev/kmsg
     class core
