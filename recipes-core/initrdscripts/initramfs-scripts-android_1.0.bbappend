@@ -10,3 +10,5 @@ do_install_append_firefish() {
 }
 
 FILES_${PN} += "/init.machine"
+
+#RDEPENDS_${PN}_remove_firefish = "android-tools-adbd"

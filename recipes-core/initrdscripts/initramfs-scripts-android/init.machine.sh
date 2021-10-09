@@ -1,9 +1,13 @@
 #!/bin/sh
 
+echo QUIT > /run/psplash_fifo
+
+/usr/bin/psplash --angle $rotation --no-console-switch &
+
 BOOT_DIR=$1
 
-mkdir $BOOT_DIR/vendor
-mount -t ext4 -o ro /dev/mmcblk0p35 $BOOT_DIR/vendor
+#mkdir $BOOT_DIR/vendor
+#mount -t ext4 -o ro /dev/mmcblk0p35 $BOOT_DIR/vendor
 
 #mkdir $BOOT_DIR/nvdata
 #mount -t ext4 -o ro /dev/mmcblk0p9 $BOOT_DIR/nvdata
@@ -27,12 +31,13 @@ mount --bind $BOOT_DIR/vendor                   /vendor
 #dd if=/nvdata/MACWLAN of=/proc/wifi/mac
 
 #ip link set up dev wlan0
-sleep 1
+#sleep 1
 #ip link set down dev wlan0
 
-/system/bin/surfaceflinger &
-killall psplash
+#/system/bin/surfaceflinger &
+#killall psplash
+#sleep 1
+#/usr/bin/psplash --angle $rotation --no-console-switch  &
 sleep 1
-/usr/bin/psplash --angle $rotation --no-console-switch  &
-sleep 1
+
 /usr/bin/msm-fb-refresher
