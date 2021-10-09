@@ -1,2 +1,1 @@
-SRC_URI_append_firefish = " file://0002-egl-Adapt-wayland-egl-to-upstream-and-use-upstream-w.patch;striplevel=2 \
-                            file://0003-hybris-gles-Add-GLESv3-headers.patch;striplevel=2 "
+SRCREV_firefish = "c3dfdb12f8bb183668d4332e48a599ee21a85a5c"
