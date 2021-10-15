@@ -9,39 +9,30 @@ on init
 
     class_start core
 
-service logd /usr/libexec/droid-hybris/system/bin/logd
+service logd /usr/libexec/hal-droid/system/bin/logd
     class core
     socket logd stream 0666 logd logd
     socket logdr seqpacket 0666 logd logd
     socket logdw dgram 0222 logd logd
     file /proc/kmsg r
     file /dev/kmsg w
-    user root
-    group logd system package_info readproc
+    user logd
+    group logd system readproc
 
 service logcat /system/bin/logcat -f /dev/kmsg
     class core
 
-service servicemanager /usr/libexec/droid-hybris/system/bin/servicemanager
-    setenv LD_PRELOAD /usr/libexec/droid-hybris/system/lib/libselinux_stubs.so
+service servicemanager /usr/libexec/hal-droid/system/bin/servicemanager
+    setenv LD_PRELOAD /usr/libexec/hal-droid/system/lib/libselinux_stubs.so
     class core
 
 service hwservicemanager /system/bin/hwservicemanager
-    setenv LD_PRELOAD /usr/libexec/droid-hybris/system/lib/libselinux_stubs.so
+    setenv LD_PRELOAD /usr/libexec/hal-droid/system/lib/libselinux_stubs.so
     class core
 
-service configstore-hal-1-0 /vendor/bin/hw/android.hardware.configstore@1.0-service
+service configstore-hal /vendor/bin/hw/android.hardware.configstore@1.1-service
     class core
 
 service gralloc-2-0 /vendor/bin/hw/android.hardware.graphics.allocator@2.0-service
     capabilities SYS_NICE
-    class core
-
-service bootanim /bin/echo
-    class core
-    disabled
-    oneshot
-
-service minisf /usr/libexec/droid-hybris/system/bin/minisfservice
-    setenv /usr/libexec/droid-hybris/system/lib/libsurfaceflinger.so
     class core
